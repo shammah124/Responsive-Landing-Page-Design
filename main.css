@@ -1,0 +1,148 @@
+:root {
+    --primary-color: rgb(3, 105, 3);
+    --text-light: rgb(129, 204, 129);
+    --text-white: white;
+    --bg-overlay: rgba(0, 0, 0, 0.7);
+}
+
+body {
+    background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url(Agric.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: var(--text-white);
+    margin: 0;
+    padding: 0;
+}
+
+/* General Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hero Section */
+.hero-product {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-product h1 {
+    font-size: 2rem;
+    color: var(--text-white);
+}
+
+.hero-product p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+.hero-product button {
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.hero-product button:hover {
+    background-color: rgb(2, 85, 2);
+}
+
+/* Features Section */
+.features-container {
+    margin-top: 3rem;
+}
+
+.features-container h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Feature Box */
+.feature-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.feature-image img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 5%;
+    object-fit: cover;
+}
+
+.feature-title {
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.feature-description {
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+/* Footer Section */
+footer {
+    margin-top: 3rem;
+    padding: 1rem;
+    background: black;
+    text-align: center;
+    color: var(--text-white);
+}
+
+footer h2 {
+    font-size: 1.5rem;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-box {
+        width: 90%;
+    }
+
+    .hero-product h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-product p {
+        font-size: 1rem;
+    }
+
+    .hero-product button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}
