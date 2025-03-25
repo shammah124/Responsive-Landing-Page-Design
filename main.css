@@ -1,10 +1,12 @@
 :root {
+    /* Define color variables for consistency and easy theme adjustments */
     --primary-color: rgb(3, 105, 3);
     --text-light: rgb(129, 204, 129);
     --text-white: white;
     --bg-overlay: rgba(0, 0, 0, 0.7);
 }
 
+/* General Body Styling */
 body {
     background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url(Agric.jpeg);
     background-repeat: no-repeat;
@@ -16,7 +18,7 @@ body {
     padding: 0;
 }
 
-/* General Container */
+/* General Container Styling */
 .container {
     width: 90%;
     margin: 0 auto;
@@ -25,24 +27,22 @@ body {
     align-items: center;
 }
 
-/* Hero Section */
+/* Hero Section Styling */
 .hero-product {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
-
 .hero-product h1 {
     font-size: 2rem;
     color: var(--text-white);
 }
-
 .hero-product p {
     font-size: 1.2rem;
     color: var(--text-light);
 }
-
 .hero-product button {
     margin-top: 1rem;
     background-color: var(--primary-color);
@@ -54,22 +54,19 @@ body {
     font-size: 1rem;
     transition: background 0.3s ease;
 }
-
 .hero-product button:hover {
     background-color: rgb(2, 85, 2);
 }
 
-/* Features Section */
+/* Features Section Styling */
 .features-container {
     margin-top: 3rem;
-}
-
-.features-container h1 {
     text-align: center;
+}
+.features-container h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
-
 .features {
     display: flex;
     justify-content: center;
@@ -77,34 +74,35 @@ body {
     gap: 2rem;
 }
 
-/* Feature Box */
+/* Product Feature Box Styling */
 .feature-box {
     background: rgba(255, 255, 255, 0.1);
     padding: 1rem;
     border-radius: 10px;
     width: 300px;
     text-align: center;
+    transition: transform 0.3s ease-in-out;
 }
-
+.feature-box:hover {
+    transform: scale(1.05);
+}
 .feature-image img {
     width: 12rem;
     height: 12rem;
     border-radius: 5%;
     object-fit: cover;
 }
-
 .feature-title {
     color: red;
     font-size: 1.2rem;
     margin-top: 0.5rem;
 }
-
 .feature-description {
     font-size: 1rem;
     padding: 0.5rem;
 }
 
-/* Footer Section */
+/* Footer Styling */
 footer {
     margin-top: 3rem;
     padding: 1rem;
@@ -112,37 +110,78 @@ footer {
     text-align: center;
     color: var(--text-white);
 }
-
 footer h2 {
     font-size: 1.5rem;
 }
-
 footer p {
     font-size: 1rem;
     margin: 0.2rem 0;
 }
+footer a {
+    color: var(--text-light);
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .features {
-        flex-direction: column;
-        align-items: center;
+/* Responsive Styling for Mobile Devices */
+@media screen and (max-width: 480px) {
+    body {
+        height: auto;
     }
-
-    .feature-box {
-        width: 90%;
+    .container {
+        width: 100%;
     }
-
     .hero-product h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
-
     .hero-product p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
-
     .hero-product button {
         font-size: 0.9rem;
         padding: 0.5rem 1rem;
     }
+    .features {
+        flex-direction: column;
+    }
+    .feature-box {
+        width: 17rem;
+    }
+    footer h2 {
+        font-size: 1.2rem;
+    }
+    footer p {
+        font-size: 0.9rem;
+    }
 }
+
+/* Responsive Styling for Tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        height: auto;
+    }
+    .hero-product h1 {
+        font-size: 2.2rem;
+    }
+    .hero-product p {
+        font-size: 1.5rem;
+    }
+    .hero-product button {
+        font-size: 1.5rem;
+    }
+    .features {
+        flex-wrap: wrap;
+    }
+    .feature-box {
+        width: 17rem;
+    }
+    footer h2 {
+        font-size: 2rem;
+    }
+    footer p {
+        font-size: 1.5rem;
+    }
+}
+

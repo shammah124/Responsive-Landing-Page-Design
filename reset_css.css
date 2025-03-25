@@ -1,35 +1,59 @@
+/*
+    Reset CSS File
+    ----------------------------
+    This file ensures consistent styling across different browsers
+    by resetting default margins, paddings, and element behaviors.
+*/
+
+/* Global Reset: Removes default margin, padding, and ensures consistent box sizing */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures padding and border do not affect element width/height */
 }
 
+/* Set default background and font properties */
 html, body {
-    background-color: #1e1e1e;
+    background-color: #1e1e1e; /* Dark background for better contrast */
     height: 100%;
     font-family: sans-serif;
     line-height: 1.6;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
 }
+
+/* Ensure images are responsive and do not exceed their container width */
 img {
     max-width: 100%;
     height: auto;
 }
 
+/* Default link styles: Removes underlines and uses inherited color */
 a {
     text-decoration: none;
     color: inherit;
+    transition: color 0.3s ease-in-out; /* Smooth transition for color changes */
 }
 
+/* Remove default bullet points from lists */
 ul, ol {
     list-style: none;
 }
 
+/* Reset button styles to allow custom styling */
 button {
     background: none;
     border: none;
     cursor: pointer;
+    outline: none; /* Removes default focus outline */
 }
 
+/* Ensure form elements inherit font styles for consistency */
 input, button, textarea, select {
     font: inherit;
+    outline: none;
+}
+
+/* Remove default focus outlines and improve accessibility */
+input:focus, textarea:focus, select:focus, button:focus {
+    outline: 2px solid rgba(3, 105, 3, 0.5);
 }
