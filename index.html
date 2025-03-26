@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgricTooling</title>
-    
-    <!-- Linking external CSS files for reset styling and main design -->
+    <link rel="icon" href="AgricLogo.jpg" type="images/x-icon">
+    <link rel="stylesheet" href="fontawesome-free-6.7.2-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -21,67 +22,99 @@
     and potentially purchase farming equipment.
 -->
 
-<header>
-    <!-- Navigation Section -->
-    <nav>
-        <div class="container">
-            <h1 class="logo">AgricTooling</h1>
-            <ul class="nav-links">
+<div class="container">
+    <!-- Mobile Navigation -->
+    <nav class="mobile-box">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><div class="logo"><img src="AgricLogo.jpg" alt="logo"></div></li>
+        </ul>
+    </nav>
+
+    <!-- Main Header with Navigation -->
+    <header class="main-header">
+        <!-- Hamburger Menu for Mobile View -->
+        <div class="hamburger">
+            <i class="fas fa-bars" id="bars"></i>
+            <i class="fas fa-xmark" style="display: none;" id="x-mark"></i>
+        </div>
+
+        <!-- Logo and Branding -->
+        <a href="#" class="logo-link">
+            <div class="logo-brand">
+                <div class="logo"><img src="AgricLogo.jpg" alt="logo"></div>
+                <div class="brand-name"><p>Agric<i style="color: rgb(24, 243, 24);">Tooling</i></p></div>
+            </div>
+        </a>
+
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#products">Products</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Premium Agricultural Tools for a Better Harvest</h1>
+            <p>Durable and reliable equipment designed to enhance productivity.</p>
+            <a href="#products" class="cta-btn">Explore Now</a>
         </div>
-    </nav>
-</header>
+    </section>
 
-<!-- Hero Section: Improved visual appeal with background image -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Premium Agricultural Tools for a Better Harvest</h1>
-        <p>Durable and reliable equipment designed to enhance productivity.</p>
-        <button class="cta-btn">Explore Now</button>
-    </div>
-</section>
+    <!-- Features Section -->
+    <section id="products" class="features-container">
+        <h2>Our Products</h2>
+        <div class="features">
+            <article class="feature-box">
+                <img src="Electric_Mower.webp" alt="Electric Hand Mower">
+                <h3>Electric Hand Mower</h3>
+                <p>Trims grass efficiently with rotating blades powered by an electric motor.</p>
+            </article>
 
-<!-- Features Section: Implementing Flexbox for better responsiveness -->
-<section id="products" class="features-container">
-    <h2>Our Products</h2>
-    <div class="features">
-        <!-- Product 1: Electric Hand Mower -->
-        <div class="feature-box">
-            <img src="Electric_Mower.webp" alt="Electric Hand Mower">
-            <h3>Electric Hand Mower</h3>
-            <p>Trims grass efficiently with rotating blades powered by an electric motor.</p>
+            <article class="feature-box">
+                <img src="Plough_Disc.jpg" alt="Disc Plough">
+                <h3>Disc Plough</h3>
+                <p>Rotating discs cut and turn over soil with ease.</p>
+            </article>
+
+            <article class="feature-box">
+                <img src="Electric_Wheelbarrow.avif" alt="Electric Wheelbarrow">
+                <h3>Electric Wheelbarrow</h3>
+                <p>Motorized wheel for carrying heavy loads with minimal effort.</p>
+            </article>
         </div>
+    </section>
 
-        <!-- Product 2: Disc Plough -->
-        <div class="feature-box">
-            <img src="Plough_Disc.jpg" alt="Disc Plough">
-            <h3>Disc Plough</h3>
-            <p>Rotating discs cut and turn over soil with ease.</p>
+    <!-- Footer Section -->
+    <footer id="contact" class="my-footer">
+        <p id="footer-small-text">Have any agricultural equipment needs? Feel free to <i style="color: white;">contact us</i>.</p>
+        <button class="contact-me">CONTACT US</button>
+
+        <div class="footer">
+            <div class="company-year">
+                <p>&copy; 2025 <i style="color: white;">AgricTooling</i>. All rights reserved</p>
+            </div>
+            <div class="footer-sm-icons">
+                <p class="fb"><a href="#"><i class="fab fa-facebook-f" style="color: #1877F2"></i></a></p>
+                <p class="ista"><a href="#"><i class="fab fa-instagram" style="color: #E4405F"></i></a></p>
+                <p class="linkin"><a href="#"><i class="fab fa-linkedin" style="color: #0A66C2"></i></a></p>
+                <p class="twitter"><a href="#"><i class="fab fa-x-twitter" style="color: #FFFFFF"></i></a></p>
+                <p class="youtube"><a href="#"><i class="fab fa-square-youtube" style="color: #FF0000"></i></a></p>
+            </div>
         </div>
+    </footer>
+</div>
 
-        <!-- Product 3: Electric Wheelbarrow -->
-        <div class="feature-box">
-            <img src="Electric_Wheelbarrow.avif" alt="Electric Wheelbarrow">
-            <h3>Electric Wheelbarrow</h3>
-            <p>Motorized wheel for carrying heavy loads with minimal effort.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Footer Section: Enhancing semantic structure with <address> -->
-<footer id="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <address>
-            <p>Email: <a href="mailto:shammahbagat@gmail.com">shammahbagat@gmail.com</a></p>
-            <p>Phone: <a href="tel:+2348164809715">+2348164809715</a></p>
-            <p>Follow us on: <a href="https://facebook.com/shammahayub" target="_blank">Facebook</a></p>
-        </address>
-        <p>&copy; 2024 AgricTooling. All rights reserved.</p>
-    </div>
-</footer>
+<script src="js/main.js"></script>
 </body>
 </html>
+

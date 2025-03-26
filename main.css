@@ -1,12 +1,13 @@
 :root {
-    /* Define color variables for consistency and easy theme adjustments */
+    /* Define color variables for consistency and branding */
     --primary-color: rgb(3, 105, 3);
+    --secondary-color: rgb(221, 188, 3);
     --text-light: rgb(129, 204, 129);
     --text-white: white;
-    --bg-overlay: rgba(0, 0, 0, 0.7);
+    --bg-overlay: rgba(0, 0, 0, 0.5);
 }
 
-/* Reset global styles for consistency */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +17,7 @@
 html, body {
     font-family: Arial, sans-serif;
     color: var(--text-white);
-    background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url(Agric.jpeg);
+    background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url(Agric.jpeg    );
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -24,37 +25,77 @@ html, body {
     scroll-behavior: smooth;
 }
 
-/* Navigation Bar Styling */
-nav {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 1rem;
+/* Mobile Navigation */
+.mobile-box {
+    display: none;
+}
+.hamburger {
+    display: none;
+}
+
+/* Main Header */
+.main-header {
     display: flex;
+    height: 4rem;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
-.nav-links {
+
+.logo-link {
+    text-decoration: none;
+}
+
+.logo-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    border-radius: 5rem;
+}
+
+.brand-name p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(2, 209, 2);
+}
+
+.main-nav ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
 }
-.nav-links a {
+
+.main-nav a {
+    display: block;
+    padding: 0.7rem;
+    border-radius: 1rem;
     color: var(--text-white);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
-.nav-links a:hover {
-    color: var(--text-light);
+
+.main-nav a:hover {
+    color: rgb(2, 209, 2);
+    background-color: white;
 }
 
-/* Hero Section Styling */
+/* Hero Section */
 .hero {
-    height: 80vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url('hero-image.jpg') center/cover no-repeat;
+    background: url('images/hero-image.jpg') center/cover no-repeat;
     padding: 2rem;
 }
 .hero-content {
@@ -70,6 +111,7 @@ nav {
     margin: 1rem 0;
 }
 .cta-btn {
+    display: inline-block;
     background: var(--primary-color);
     color: var(--text-white);
     padding: 0.7rem 1.5rem;
@@ -77,12 +119,13 @@ nav {
     cursor: pointer;
     font-size: 1rem;
     transition: background 0.3s ease;
+    text-decoration: none;
 }
 .cta-btn:hover {
     background: rgb(2, 85, 2);
 }
 
-/* Features Section Styling */
+/* Features Section */
 .features-container {
     text-align: center;
     padding: 3rem 0;
@@ -114,37 +157,119 @@ nav {
     color: red;
 }
 
-/* Footer Styling */
-footer {
+/* Footer Section */
+.my-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
     background: black;
     padding: 2rem 0;
     text-align: center;
 }
-footer h2 {
-    font-size: 1.5rem;
-}
-footer address, footer p {
+.my-footer button {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
     font-size: 1rem;
-    margin: 0.3rem 0;
 }
-footer a {
-    color: var(--text-light);
-    text-decoration: none;
-}
-footer a:hover {
-    text-decoration: underline;
+.my-footer button:hover {
+    background: rgb(2, 85, 2);
 }
 
-/* Responsive Design for Mobile */
+/* Footer Icons */
+.footer-sm-icons p {
+    display: inline;
+    margin: 0 3px;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
+    /* Main Header */
+    .main-header {
+        height: 3rem;
+    }
+    /* Hamburger */
+    .hamburger {
+        display: block;
+        margin-left: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .hamburger #bars:hover {
+        color: blue;
+    }
+    .hamburger #x-mark:hover {
+        color: red;
+    }
+    /* Logo and Brand Name */
+    .logo-link {
+        margin-right: 1rem;
+    }
+    .logo img {
+        width: 1.7rem;
+        height: 1.7rem;
+        border-radius: 10rem;
+    }
+    .logo-brand .brand-name p{
+        font-size: 0.9rem;
+    }
+
+    /* Navigation */
+    .main-nav {
+        display: none;
+    }
+    /* Nav For Mobile Box Side */
+    .mobile-box {
+        display: none;
+        position: fixed;
+        top: 3rem;
+        width: 100%;
+        height: 70vh;
+        background-color: #1e1e1e;
+        z-index: 900;
+    }
+    .mobile-box .logo {
+        display: flex;
+        margin: auto 0;
+        justify-content: center;
+    }
+    .mobile-box ul {
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+    }
+    .mobile-box ul li{
+        border: 1px solid #161616;
+    }
+    .mobile-box ul li:hover{
+        border: 1px solid #161616;
+    }
+    .mobile-box ul li:last-child{
+        padding: 2rem;
+        border: none;
+    }
+    .mobile-box ul li a {
+        display: inline-block;
+        width: 100%;
+        padding: 1.5rem;
+        color: var(--white-color);
+        text-decoration: none;
+        font-size: 1rem;
+        text-align: center;
+    }
     .features {
         flex-direction: column;
     }
     .feature-box {
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
-        margin-top: 1rem;
-        
     }
     .hero h1 {
         font-size: 1.8rem;
@@ -156,4 +281,8 @@ footer a:hover {
         font-size: 1rem;
         padding: 0.6rem 1.2rem;
     }
+    #footer-small-text {
+        width: 90%;
+    }
 }
+
