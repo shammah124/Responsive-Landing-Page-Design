@@ -6,11 +6,14 @@ AgricTooling is a simple agricultural tools e-commerce webpage built using HTML 
 ## 🛠 Technologies Used
 - **HTML5**: For webpage structure and content.  
 - **CSS3**: For styling, layout, and responsiveness.
+- **JAVASCRIPT**: For handling the hamburger icon for the mobile nav 
 
 ## 📂 Project Structure
 - index.html      # Main HTML file for the webpage
 - main.css        # Primary CSS file for styling
 - reset_css.css   # Reset CSS for consistent browser styling
+- main.js         # Mobile Nav tweaking
+- AgricLogo.jpg   # Platform Icon
 - Agric.jpeg      # Background image
 - Electric_Mower.webp # Product image
 - Plough_Disc.jpg # Product image
