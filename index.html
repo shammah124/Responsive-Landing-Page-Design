@@ -21,56 +21,67 @@
     and potentially purchase farming equipment.
 -->
 
-<div class="container">
-    <!-- Hero Section: Displays a promotional banner for the store -->
-    <section class="hero-product">
-        <h1>Buy the Best Agricultural Tools Here</h1>
-        <p>Durable and Reliable is what our Products Speak</p>
-        <button>Learn More </button>
-    </section>
-
-    <!-- Features Section: Lists the available products with images and descriptions -->
-    <section class="features-container">
-        <h2>Our Products</h2>
-        <div class="features">
-            <!-- Product 1: Electric Hand Mower -->
-            <div class="feature-box">
-                <div class="feature-image">
-                    <img src="Electric_Mower.webp" alt="Electric Hand Mower">
-                </div>
-                <p class="feature-title">Electric Hand Mower</p>
-                <p class="feature-description">Trims grass with rotating blades, electric motor driven.</p>
-            </div>
-
-            <!-- Product 2: Disc Plough -->
-            <div class="feature-box">
-                <div class="feature-image">
-                    <img src="Plough_Disc.jpg" alt="Disc Plough">
-                </div>
-                <p class="feature-title">Disc Plough</p>
-                <p class="feature-description">Rotating discs cut and turn over soil.</p>
-            </div>
-
-            <!-- Product 3: Electric Wheelbarrow -->
-            <div class="feature-box">
-                <div class="feature-image">
-                    <img src="Electric_Wheelbarrow.avif" alt="Electric Wheelbarrow">
-                </div>
-                <p class="feature-title">Electric Wheelbarrow</p>
-                <p class="feature-description">Motorized wheel, carries heavy loads, eases manual transport.</p>
-            </div>
+<header>
+    <!-- Navigation Section -->
+    <nav>
+        <div class="container">
+            <h1 class="logo">AgricTooling</h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </section>
+    </nav>
+</header>
 
-    <!-- Footer Section: Displays contact information and company rights -->
-    <footer>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:shammahbagat@gmail.com">shammahbagat@gmail.com</a></p>
-        <p>Phone Number: <a href="tel:+2348164809715">+2348164809715</a></p>
-        <p>Social Media: <a href="https://facebook.com/shammahayub" target="_blank">facebook.com/shammahayub</a></p>
-        <p>&copy; All rights reserved</p>
-    </footer>
-</div>
+<!-- Hero Section: Improved visual appeal with background image -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Premium Agricultural Tools for a Better Harvest</h1>
+        <p>Durable and reliable equipment designed to enhance productivity.</p>
+        <button class="cta-btn">Explore Now</button>
+    </div>
+</section>
+
+<!-- Features Section: Implementing Flexbox for better responsiveness -->
+<section id="products" class="features-container">
+    <h2>Our Products</h2>
+    <div class="features">
+        <!-- Product 1: Electric Hand Mower -->
+        <div class="feature-box">
+            <img src="Electric_Mower.webp" alt="Electric Hand Mower">
+            <h3>Electric Hand Mower</h3>
+            <p>Trims grass efficiently with rotating blades powered by an electric motor.</p>
+        </div>
+
+        <!-- Product 2: Disc Plough -->
+        <div class="feature-box">
+            <img src="Plough_Disc.jpg" alt="Disc Plough">
+            <h3>Disc Plough</h3>
+            <p>Rotating discs cut and turn over soil with ease.</p>
+        </div>
+
+        <!-- Product 3: Electric Wheelbarrow -->
+        <div class="feature-box">
+            <img src="Electric_Wheelbarrow.avif" alt="Electric Wheelbarrow">
+            <h3>Electric Wheelbarrow</h3>
+            <p>Motorized wheel for carrying heavy loads with minimal effort.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section: Enhancing semantic structure with <address> -->
+<footer id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <address>
+            <p>Email: <a href="mailto:shammahbagat@gmail.com">shammahbagat@gmail.com</a></p>
+            <p>Phone: <a href="tel:+2348164809715">+2348164809715</a></p>
+            <p>Follow us on: <a href="https://facebook.com/shammahayub" target="_blank">Facebook</a></p>
+        </address>
+        <p>&copy; 2024 AgricTooling. All rights reserved.</p>
+    </div>
+</footer>
 </body>
 </html>
-
