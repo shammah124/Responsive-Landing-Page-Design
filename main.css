@@ -17,7 +17,7 @@
 
 body {
     color: var(--text-white);
-    background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url('Agric.jpeg');
+    background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url('images/Agric.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -88,8 +88,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 90vh;
-    background: url('images/hero-image.jpg') center/cover no-repeat;
+    height: 100vh;
 }
 
 .hero-content {
